@@ -1,0 +1,24 @@
+mybatis:
+  type-aliases-package: com.tongudn.micoservicsimpleprovideruser.entity
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mapper/*.xml
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://39.108.92.70:13500/movie_dev?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: Zh1RphJG
+  application:
+    name: microservice-simple-provider-user
+server:
+  port: 8080
+logging:
+  level:
+    root: info
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
